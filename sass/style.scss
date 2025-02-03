@@ -1,0 +1,106 @@
+@use "color";
+
+body {
+  font-family: "Oswald", "Noto Sans JP", serif;
+  // font-family: "Yuji Syuku", "Noto Sans JP", "Oswald", serif;
+  // background-color: color.$bg-middle;
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px 6px 30px;
+  width: 160px;
+  margin: 0 auto;
+
+  &--bg {
+    background-color: color.$white;
+
+    .button__text {
+      color: color.$bg-dark;
+    }
+  }
+
+  &--border {
+    border: 1px solid color.$white;
+
+    .button__text {
+      color: color.$white;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon-path {
+    fill: color.$white;
+
+    &--contact {
+      fill: color.$bg-dark;
+    }
+  }
+  &__text {
+    margin-left: 10px;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: color.$white;
+  }
+}
+
+.header {
+  background-color: color.$bg-dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  &__container {
+    position: relative;
+  }
+
+  &__contents {
+    display: none;
+    height: calc(100vh - 72px);
+    border-top: 1px solid color.$white;
+    padding-top: 60px;
+  }
+
+  &__logo {
+    display: inline-block;
+    padding: 14px 24px;
+    font-size: 30px;
+    color: color.$white;
+    font-family: "Yuji Syuku", "Oswald", "Noto Sans JP", serif;
+  }
+
+  &__menu-button {
+    border: none;
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    width: 30px;
+    height: 36px;
+    overflow: hidden;
+    color: transparent;
+    background: url(../img/bg_menu.png) center center no-repeat;
+    background-size: 100% auto;
+
+    &.is-checked {
+      background: url(../img/bg_menu-close.png) center center no-repeat;
+      background-size: 100% auto;
+    }
+  }
+
+  &__nav-item {
+    & + & {
+      margin-top: 24px;
+    }
+  }
+}
