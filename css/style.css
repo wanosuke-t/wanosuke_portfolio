@@ -67,7 +67,7 @@ body.is-fixed {
   display: none;
   height: calc(100vh - 72px);
   border-top: 1px solid #fff;
-  padding-top: 24px;
+  padding-top: 16px;
 }
 .header__logo {
   display: inline-block;
@@ -98,7 +98,7 @@ body.is-fixed {
   background-size: 100% auto;
 }
 .header__nav-item + .header__nav-item {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .fv {

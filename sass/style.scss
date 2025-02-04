@@ -71,7 +71,7 @@ body {
     display: none;
     height: calc(100vh - 72px);
     border-top: 1px solid color.$white;
-    padding-top: 24px;
+    padding-top: 16px;
   }
 
   &__logo {
@@ -80,7 +80,7 @@ body {
     font-size: 30px;
     color: color.$white;
     font-family: "Yuji Syuku";
-    
+
     &-sub {
       display: block;
       font-size: 14px;
@@ -108,7 +108,7 @@ body {
 
   &__nav-item {
     & + & {
-      margin-top: 16px;
+      margin-top: 8px;
     }
   }
 }
