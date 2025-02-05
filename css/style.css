@@ -215,6 +215,14 @@ body.is-fixed {
 .about__text + .about__text {
   margin-top: 1rem;
 }
+.about__skill-head {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.about__skill-list {
+  list-style-position: inside;
+  list-style-type: circle;
+}
 
 .flow {
   background-color: #e3f4f7;
@@ -418,14 +426,6 @@ body.is-fixed {
   }
   .about__img {
     min-width: 240px;
-  }
-  .about__skill-head {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  .about__skill-list {
-    list-style-position: inside;
-    list-style-type: circle;
   }
   .flow__list {
     display: grid;
