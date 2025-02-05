@@ -65,6 +65,7 @@ body {
 
   &__container {
     position: relative;
+    width: 100%;
   }
 
   &__contents {
@@ -380,7 +381,7 @@ body {
 /*--------------------
 // pc
 --------------------*/
-@media screen and (min-width: 768px) {
+@include breakpoints.mq(pc) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -389,9 +390,208 @@ body {
 
   .header {
     position: relative;
+    flex-basis: 20.8%;
+    padding: 50px 20px;
+
+    &__container {
+      width: 160px;
+      margin: 0 auto;
+      position: sticky;
+      top: 50px;
+    }
+
+    &__logo {
+      font-size: 30px;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+
+      &-sub {
+        font-size: 15px;
+        margin-top: 5px;
+        line-height: 1.2em;
+      }
+    }
 
     &__menu-button {
       display: none;
+    }
+
+    &__contents {
+      display: block;
+      border: none;
+      padding-top: 60px;
+    }
+    &__nav-item {
+      & + & {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .main {
+    flex-basis: 79.2%;
+  }
+
+  .button {
+    transition: background 0.3s, color 0.3s, opacity 0.3s;
+
+    &:hover {
+      background-color: color.$white;
+
+      .button__icon-path {
+        fill: color.$bg-dark;
+      }
+
+      .button__text {
+        color: color.$bg-dark;
+      }
+    }
+
+    &--bg:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .section {
+    &__inner {
+      max-width: calc(880px + 32px * 2);
+      margin: 0 auto;
+    }
+
+    &__head {
+      margin-bottom: 24px;
+    }
+
+    &__head-main {
+      font-size: 60px;
+    }
+  }
+
+  .fv {
+    position: relative;
+
+    &__contents {
+      background: url(../img/bg_fv.png) center center no-repeat;
+      background-size: 100% auto;
+      bottom: 100px;
+      left: 0;
+      max-width: 627px;
+      height: 174px;
+      padding-top: 24px;
+      padding-left: 96px;
+    }
+  }
+
+  .service {
+    &__list {
+      // display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+
+      &-img {
+        height: 69px;
+      }
+    }
+  }
+
+  .works {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8%;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .about {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+
+    &__img {
+      min-width: 240px;
+    }
+
+    &__skill {
+      &-head {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      &-list {
+        list-style-position: inside;
+        list-style-type: circle;
+      }
+    }
+  }
+
+  .flow {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    &__item {
+      & + & {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .message {
+    &__container {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+    }
+  }
+
+  .page-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__item {
+      padding: 54px 10px;
+    }
+  }
+}
+
+/*--------------------
+// tb
+--------------------*/
+@include breakpoints.mq(tb) {
+  .section {
+    &__head-main {
+      font-size: 54px;
+    }
+  }
+
+  .fv {
+    &__contents {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+
+  .flow {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 16px;
     }
   }
 }
