@@ -217,11 +217,13 @@ body.is-fixed {
 }
 .about__skill-head {
   font-weight: bold;
-  margin-top: 10px;
+  margin: 24px 0 8px;
+  line-height: 1.6;
 }
 .about__skill-list {
   list-style-position: inside;
   list-style-type: circle;
+  line-height: 1.6;
 }
 
 .flow {
